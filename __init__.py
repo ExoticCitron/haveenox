@@ -28,11 +28,6 @@ except ImportError:
     print(YELLOW + "Installing 'requests' module..." + RESET)
     os.system('pip install requests')
 
-    # Try to import requests again
-    try:
-        import requests
-    except ImportError:
-        print(RED + "Error: Failed to install 'requests' module. Please install it manually using 'pip install requests'." + RESET)
 
 def clr():
     """Clears the console."""
@@ -49,29 +44,5 @@ def repeat(string, times):
     for _ in range(times):
         print(string)
 
-def dcPost(url, content):
-    """
-    Posts content to a Discord webhook.
-    
-    Args:
-        url (str): The URL of the Discord webhook.
-        content (str): The content to be posted.
-    
-    Returns:
-        Coroutine object with the content sent, or None if the posting failed.
-    """
-    data = {
-        "content": content
-    }
-    headers = {
-        "Content-Type": "application/json"
-    }
-    
-    response = requests.post(url, data=json.dumps(data), headers=headers)
-    
-    if response.status_code == 204:
-        print(response)
-        #print(f"<coroutine Object 'sent-{content}'>") 
-    else:
-        print(f"Failed to post message to Discord. Status code: {response.status_code}")
-        return None
+from .haveenox import *
+from .dcPost import dcPost
