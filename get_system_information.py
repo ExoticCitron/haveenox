@@ -46,7 +46,5 @@ def get_system_information():
     }
 
     # Print system information to console
-    for key, value in system_info.items():
-        print(f"{key}: {value}")
-
-    return system_info
+    
+    print(system_info) 
