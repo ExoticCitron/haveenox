@@ -1,7 +1,10 @@
 ### New:
 > `clr()` - clear console
 > `repeat(content, amount)` - repeat stuff
-> `dcPost(url, content)` - post stuff to discord webhooks 
+> - - - - - - - - - - - - - 
+> `haveenox.dcPost(url, content)` - post stuff to discord webhooks
+> `haveenox.parse_json(json_string)` - parse json to python dict
+> `haveenox.create(filetype, mode, content)` - create a file with an optional mode (default = 'r') and optional add content (default=`None`) 
 
 I was bored this was a 2m thing
 
