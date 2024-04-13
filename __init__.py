@@ -1,5 +1,18 @@
+import subprocess
+import sys
 import os
-import json
+
+# Attempt to import requests module
+try:
+    import requests
+except ImportError:
+    # If not found, attempt to install it
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    try:
+        import requests
+    except ImportError:
+        # If installation fails, print error message
+        print("Error: Failed to install 'requests' module. Please install it manually using 'pip install requests'.")
 
 # Color codes
 RESET = '\033[0m'
@@ -20,15 +33,6 @@ LIGHTMAGENTA = '\033[95m'
 LIGHTCYAN = '\033[96m' 
 LIGHTWHITE = '\033[97m' 
 
-# Try to import requests module
-try:
-    import requests
-except ImportError:
-    # If not found, try to install it
-    print(YELLOW + "Installing 'requests' module..." + RESET)
-    os.system('pip install requests')
-
-
 def clr():
     """Clears the console."""
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -44,5 +48,6 @@ def repeat(string, times):
     for _ in range(times):
         print(string)
 
-from .haveenox import *
 from .dcPost import dcPost
+
+__all__ = ['dcPost', 'clr', 'repeat']
