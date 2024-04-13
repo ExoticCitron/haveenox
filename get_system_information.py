@@ -1,7 +1,16 @@
 import platform
 import psutil
 import socket
-import subprocess
+
+def get_number_of_open_ports():
+    """
+    Retrieves the number of open ports on the system.
+
+    Returns:
+        int: The number of open ports.
+    """
+    open_ports = psutil.net_connections()
+    return len(open_ports)
 
 def get_system_information():
     """
@@ -19,7 +28,7 @@ def get_system_information():
     ip_address = socket.gethostbyname(socket.gethostname())
     
     # Number of open ports
-    open_ports = len(subprocess.check_output(["netstat", "-an"]).splitlines())
+    open_ports = get_number_of_open_ports()
 
     system_info = {
         "Operating System": platform.system(),
