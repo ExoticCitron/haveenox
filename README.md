@@ -45,4 +45,4 @@ Request more colors in a pull request and ill add them.
 
 __**FAQ:**__
 > There's none lol. Open an Issue for that. 
-> print(CYAN + "Test 2" + RESET) 
+ 
