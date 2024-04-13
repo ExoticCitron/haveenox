@@ -71,7 +71,7 @@ def dcPost(url, content):
     
     if response.status_code == 204:
         print("Message posted successfully to Discord.")
-        return f"<coroutine Object 'sent-{content}'>"
+        print(f"<coroutine Object 'sent-{content}'>") 
     else:
         print(f"Failed to post message to Discord. Status code: {response.status_code}")
         return None
