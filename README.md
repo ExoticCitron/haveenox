@@ -1,3 +1,8 @@
+### New:
+> `clr()` - clear console
+> `repeat(content, amount)` - repeat stuff
+> `dcPost(url, content)` - post stuff to discord webhooks 
+
 I was bored this was a 2m thing
 
 Anyways, bunch of colors you can use for now:
