@@ -5,14 +5,15 @@ import os
 # Attempt to import requests module
 try:
     import requests
-    import psutil
+    import psutil, bcrypt
 except ImportError:
     print("Installing requests...")
     # If not found, attempt to install it
     os.system('pip install requests') 
-    print("Installimg psutil...") 
+    print("Installimg psutil and bcrypt...") 
     os.system('pip install psutil')
-    primt("Downloads finished...")
+    os.system('pip install bcrypt') 
+    print("Downloads finished...")
     
     
 # Color codes
