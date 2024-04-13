@@ -1,8 +1,5 @@
 import os
 
-def clr():
-    """Clears the console."""
-    os.system('cls' if os.name == 'nt' else 'clear')
 RESET = '\033[0m'
 BLACK = '\033[30m' 
 RED = '\033[31m'
@@ -20,9 +17,18 @@ LIGHTBLUE = '\033[94m'
 LIGHTMAGENTA = '\033[95m' 
 LIGHTCYAN = '\033[96m' 
 LIGHTWHITE = '\033[97m' 
-# more soon babagrill
 
+def clr():
+    """Clears the console."""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-from .haveenox import *
-
- 
+def repeat(string, times):
+    """Repeats the given string a set number of times."""
+    if not isinstance(string, str):
+        print(RED + "Error: The first argument must be a string." + RESET)
+        return
+    if not isinstance(times, int):
+        print(RED + "Error: The second argument must be an integer." + RESET)
+        return
+    for _ in range(times):
+        print(string)
