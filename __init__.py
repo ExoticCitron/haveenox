@@ -7,16 +7,14 @@ try:
     import requests
     import psutil
 except ImportError:
+    print("Installing requests...")
     # If not found, attempt to install it
     os.system('pip install requests') 
-    os.system('pip install psutil') 
-    try:
-        import requests
-        import psutil
-    except ImportError:
-        # If installation fails, print error message
-        print("Error: Failed to install 'requests' and 'psutil' module. Please install it manually using 'pip install requests', 'pip install psutil' .")
-
+    print("Installimg psutil...") 
+    os.system('pip install psutil')
+    primt("Downloads finished...")
+    
+    
 # Color codes
 RESET = '\033[0m'
 BLACK = '\033[30m' 
