@@ -50,5 +50,6 @@ def repeat(string, times):
 
 from .dcPost import dcPost
 from .parse_json import parse_json
+from .create import create
 
-__all__ = ['dcPost', 'clr', 'repeat', 'RESET', 'BLACK', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'WHITE', 'LIGHTBLACK', 'LIGHTRED', 'LIGHTGREEN', 'LIGHTYELLOW', 'LIGHTBLUE', 'LIGHTMAGENTA', 'LIGHTCYAN', 'LIGHTWHITE', 'parse_json']
+__all__ = ['dcPost', 'clr', 'repeat', 'RESET', 'BLACK', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'WHITE', 'LIGHTBLACK', 'LIGHTRED', 'LIGHTGREEN', 'LIGHTYELLOW', 'LIGHTBLUE', 'LIGHTMAGENTA', 'LIGHTCYAN', 'LIGHTWHITE', 'parse_json', 'create'] 
