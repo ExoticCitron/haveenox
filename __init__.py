@@ -1,6 +1,7 @@
-import requests
+import os
 import json
 
+# Color codes
 RESET = '\033[0m'
 BLACK = '\033[30m' 
 RED = '\033[31m'
@@ -18,6 +19,20 @@ LIGHTBLUE = '\033[94m'
 LIGHTMAGENTA = '\033[95m' 
 LIGHTCYAN = '\033[96m' 
 LIGHTWHITE = '\033[97m' 
+
+# Try to import requests module
+try:
+    import requests
+except ImportError:
+    # If not found, try to install it
+    print(YELLOW + "Installing 'requests' module..." + RESET)
+    os.system('pip install requests')
+
+    # Try to import requests again
+    try:
+        import requests
+    except ImportError:
+        print(RED + "Error: Failed to install 'requests' module. Please install it manually using 'pip install requests'." + RESET)
 
 def clr():
     """Clears the console."""
