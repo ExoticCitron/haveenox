@@ -2,16 +2,6 @@ import platform
 import psutil
 import socket
 
-def get_number_of_open_ports():
-    """
-    Retrieves the number of open ports on the system.
-
-    Returns:
-        int: The number of open ports.
-    """
-    open_ports = psutil.net_connections()
-    return len(open_ports)
-
 def get_system_information():
     """
     Retrieves system information such as operating system, architecture, hostname, CPU usage, memory usage,
@@ -20,6 +10,16 @@ def get_system_information():
     Returns:
         dict: A dictionary containing system information.
     """
+    def get_number_of_open_ports():
+        """
+        Retrieves the number of open ports on the system.
+
+        Returns:
+            int: The number of open ports.
+        """
+        open_ports = psutil.net_connections()
+        return len(open_ports)
+
     # CPU and memory usage
     cpu_usage = psutil.cpu_percent(interval=1)
     memory_usage = psutil.virtual_memory().percent
@@ -43,8 +43,3 @@ def get_system_information():
         "Number of Open Ports": open_ports
     }
     return system_info
-
-# Test the function
-system_info = get_system_information()
-for key, value in system_info.items():
-    print(f"{key}: {value}")
