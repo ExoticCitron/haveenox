@@ -7,6 +7,8 @@ def get_system_information():
     Retrieves system information such as operating system, architecture, hostname, CPU usage, memory usage,
     IP address, and number of open ports.
 
+    Prints the system information to the console and returns it as a dictionary.
+
     Returns:
         dict: A dictionary containing system information.
     """
@@ -42,4 +44,9 @@ def get_system_information():
         "IP Address": ip_address,
         "Number of Open Ports": open_ports
     }
+
+    # Print system information to console
+    for key, value in system_info.items():
+        print(f"{key}: {value}")
+
     return system_info
