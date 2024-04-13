@@ -28,7 +28,7 @@ Request more colors in a pull request and ill add them.
 > 1) On your shell or cmd, run the following below:
 > ```git clone https://github.com/ExoticCitron/haveenox.git```
 
->  `Note:` You must have [Git](https://google.com/) installed for this to work
+>  `Note:` You must have [Git](https://git-scm.com/downloads) installed for this to work
 
 > 2) Import the package directly on your main file using the example below:
 > ```py
@@ -40,6 +40,7 @@ Request more colors in a pull request and ill add them.
 > from haveenox import *
 >
 > print(f"{LIGHTMAGENTA} Test 1")
+> print(CYAN + "Test 2" + RESET)
 > ```
 
 __**FAQ:**__
