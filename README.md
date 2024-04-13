@@ -45,4 +45,5 @@ Request more colors in a pull request and ill add them.
 
 __**FAQ:**__
 > There's none lol. Open an Issue for that. 
- 
+
+**Disclaimer:** You are currently downloading the dev build of this package, I'll make a public package soon on [PyPi](https://pypi.org/) 
