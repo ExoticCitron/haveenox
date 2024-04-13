@@ -5,14 +5,17 @@ import os
 # Attempt to import requests module
 try:
     import requests
+    import psutil
 except ImportError:
     # If not found, attempt to install it
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    os.system('pip install requests') 
+    os.system('pip install psutil') 
     try:
         import requests
+        import psutil
     except ImportError:
         # If installation fails, print error message
-        print("Error: Failed to install 'requests' module. Please install it manually using 'pip install requests'.")
+        print("Error: Failed to install 'requests' and 'psutil' module. Please install it manually using 'pip install requests', 'pip install psutil' .")
 
 # Color codes
 RESET = '\033[0m'
