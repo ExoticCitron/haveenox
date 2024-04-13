@@ -1,16 +1,14 @@
 # __init__.py
 
-# Define the color codes and names
-COLORS = {
-    'GREEN': '\033[92m',
-    'RED': '\033[91m',
-    'YELLOW': '\033[93m',
-    # Add more colors as needed
-    'RESET': '\033[0m'
-}
+# Define ANSI color codes
+GREEN = '\033[92m'
+RED = '\033[91m'
+YELLOW = '\033[93m'
+# Add more colors as needed
+RESET = '\033[0m'
 
-# Dynamically create the color variables
-for color_name, color_code in COLORS.items():
-    globals()[color_name] = color_code
-
+# Import everything from haveenox.py
 from .haveenox import *
+
+# Alternatively, you can specify exactly what you want to import:
+# from .haveenox import GREEN, RED, YELLOW, RESET
