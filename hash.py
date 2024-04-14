@@ -14,7 +14,7 @@ def hash(password, salt_rounds=12):
     # Generate salt and hash the password
     salt = bcrypt.gensalt(rounds=salt_rounds)
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
-    OL = hashed_password.decode('utf-8')
-    print("Hashed Password: ",OL) 
+    hashed_password.decode('utf-8')
+    return hashed_password
 
 
