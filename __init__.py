@@ -5,13 +5,12 @@ import os
 # Attempt to import requests module
 try:
     import requests
-    import psutil, bcrypt
+    import bcrypt
 except ImportError:
     print("Installing requests...")
     # If not found, attempt to install it
     os.system('pip install requests') 
-    print("Installimg psutil and bcrypt...") 
-    os.system('pip install psutil')
+    print("Installimg bcrypt...") 
     os.system('pip install bcrypt') 
     print("Downloads finished...")
     
@@ -53,6 +52,6 @@ def repeat(string, times):
 from .dcPost import dcPost
 from .parse_json import parse_json
 from .create import create
+from .hash import hash
 
-
-__all__ = ['dcPost', 'clr', 'repeat', 'RESET', 'BLACK', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'WHITE', 'LIGHTBLACK', 'LIGHTRED', 'LIGHTGREEN', 'LIGHTYELLOW', 'LIGHTBLUE', 'LIGHTMAGENTA', 'LIGHTCYAN', 'LIGHTWHITE', 'parse_json', 'create'] 
+__all__ = ['dcPost', 'clr', 'repeat', 'RESET', 'BLACK', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'WHITE', 'LIGHTBLACK', 'LIGHTRED', 'LIGHTGREEN', 'LIGHTYELLOW', 'LIGHTBLUE', 'LIGHTMAGENTA', 'LIGHTCYAN', 'LIGHTWHITE', 'parse_json', 'create', 'hash' ] 
