@@ -7,12 +7,12 @@ try:
     import requests
     import bcrypt
 except ImportError:
-    print("Installing requests...")
+    print("Installing requests package...")
     # If not found, attempt to install it
     os.system('pip install requests') 
-    print("Installimg bcrypt...") 
+    print("Installimg bcrypt package...") 
     os.system('pip install bcrypt') 
-    print("Downloads finished...")
+    print("All Downloads Havw Finished...")
     
     
 # Color codes
